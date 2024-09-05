@@ -12,3 +12,59 @@ img,
 video {
   display: block;
 }
+
+#startscreen {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 300px;
+}
+
+h1 {
+  padding-bottom: 40px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.tagline {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#durationscreen {
+  /* visibility: hidden; */
+}
+
+.duration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.time-selectors {
+  display: flex;
+  gap: 30px;
+}
+
+#exercicescreen {
+  visibility: hidden;
+}
+
+#countdownscreen {
+  visibility: hidden;
+}
+
+#endscreen {
+  visibility: hidden;
+}
+
+.screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}

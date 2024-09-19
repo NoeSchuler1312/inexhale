@@ -16,40 +16,41 @@
     <div id="durationscreen" class="screen">
       <div class="duration-container">
         <h2>Durée</h2>
-        <div class="time-selectors">
-          <div class="time-selector">
+        <div class="time-selector-container">
+          <div class="time-selector time-selector-active">
             <p><span>1</span></p>
             <p>minute</p>
           </div>
           <div class="time-selector">
             <p><span>2</span></p>
-            <p>minute</p>
+            <p>minutes</p>
           </div>
           <div class="time-selector">
             <p><span>3</span></p>
-            <p>minute</p>
+            <p>minutes</p>
           </div>
           <div class="time-selector">
             <p><span>4</span></p>
-            <p>minute</p>
+            <p>minutes</p>
           </div>
           <div class="time-selector">
             <p><span>5</span></p>
-            <p>minute</p>
+            <p>minutes</p>
           </div>
         </div>
-        <div class="button">Commencer la séances</div>
+        <div class="button">Commencer la séance</div>
       </div>
     </div>
     <div id="countdownscreen" class="screen">
-      <p class="countdown-number">3</p>
-      <p class="countdown-number">2</p>
-      <p class="countdown-number">1</p>
+      <p class="countdown-number" id="countdown-3">3</p>
+      <p class="countdown-number" id="countdown-2">2</p>
+      <p class="countdown-number" id="countdown-1">1</p>
     </div>
     <div id="exercicescreen" class="screen">
       <div class="exercice-container">
+        <h2 class="instruction instruction-active">Inspirez</h2>
+        <h2 class="instruction">Expirez</h2>
         <div class="circle"></div>
-        <h2 class="instruction">Inspirez</h2>
       </div>
     </div>
     <div id="endscreen" class="screen">

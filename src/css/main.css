@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 a {
   color: inherit;
 }
@@ -13,6 +17,12 @@ video {
   display: block;
 }
 
+.screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
 #startscreen {
   visibility: hidden;
   display: flex;
@@ -20,12 +30,10 @@ video {
   align-items: center;
   text-align: center;
   justify-content: center;
-  gap: 300px;
 }
 
 h1 {
   padding-bottom: 40px;
-
   display: flex;
   justify-content: center;
 }
@@ -36,7 +44,10 @@ h1 {
 }
 
 #durationscreen {
-  /* visibility: hidden; */
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .duration-container {
@@ -46,25 +57,102 @@ h1 {
   text-align: center;
 }
 
-.time-selectors {
+.time-selector-container {
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  padding-bottom: 70px;
 }
 
-#exercicescreen {
-  visibility: hidden;
+h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 13px;
+}
+
+.time-selector {
+  color: #ccc;
+}
+
+.time-selector.time-selector-active {
+  color: #000;
+}
+
+.time-selector p {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.time-selector span {
+  font-size: 100px;
+}
+
+.time-selector:hover {
+  cursor: pointer;
+}
+
+.button {
+  font-size: 32px;
+  padding: 13px 35px;
+  border: 2px solid;
+  border-radius: 60;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 #countdownscreen {
   visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-number {
+  font-size: 200;
+  font-weight: 400;
+  position: absolute;
+}
+
+#exercicescreen {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.exercice-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: absolute;
+  z-index: -1;
+  background-color: #fff;
+  border: 5px solid;
+  width: 300px;
+  height: 300px;
+  border-radius: 1200;
+}
+
+.instruction {
+  position: absolute;
+  opacity: 0;
+}
+
+.instruction.instruction-active {
+  opacity: 1;
 }
 
 #endscreen {
-  visibility: hidden;
-}
-
-.screen {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
+  /* visibility: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
 }

@@ -16,30 +16,47 @@
     </div>
     <div id="durationscreen" class="screen">
       <div class="duration-container">
-        <h2>Durée</h2>
-        <div class="time-selector-container">
-          <div class="time-selector time-selector-active">
-            <p><span>1</span></p>
-            <p>minute</p>
+        <fieldset>
+          <h2>Durée</h2>
+          <div class="time-selectors">
+            <label>
+              <input type="radio" id="1-minute" name="duration" />
+              <div class="time-selector">
+                <p><span>1</span></p>
+                <p>minute</p>
+              </div>
+            </label>
+            <label>
+              <input type="radio" id="2-minute" name="duration" />
+              <div class="time-selector">
+                <p><span>2</span></p>
+                <p>minute</p>
+              </div>
+            </label>
+            <label>
+              <input type="radio" id="3-minute" name="duration" />
+              <div class="time-selector">
+                <p><span>3</span></p>
+                <p>minute</p>
+              </div>
+            </label>
+            <label>
+              <input type="radio" id="4-minute" name="duration" />
+              <div class="time-selector">
+                <p><span>4</span></p>
+                <p>minute</p>
+              </div>
+            </label>
+            <label>
+              <input type="radio" id="5-minute" name="duration" />
+              <div class="time-selector">
+                <p><span>5</span></p>
+                <p>minute</p>
+              </div>
+            </label>
           </div>
-          <div class="time-selector">
-            <p><span>2</span></p>
-            <p>minutes</p>
-          </div>
-          <div class="time-selector">
-            <p><span>3</span></p>
-            <p>minutes</p>
-          </div>
-          <div class="time-selector">
-            <p><span>4</span></p>
-            <p>minutes</p>
-          </div>
-          <div class="time-selector">
-            <p><span>5</span></p>
-            <p>minutes</p>
-          </div>
-        </div>
-        <div class="button">Commencer la séance</div>
+          <div class="button" id="startbtn">Commencer la séances</div>
+        </fieldset>
       </div>
     </div>
     <div id="countdownscreen" class="screen">

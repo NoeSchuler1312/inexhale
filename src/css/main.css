@@ -21,15 +21,21 @@ video {
   position: fixed;
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(82, 205, 215, 1) 0%,
+    rgba(5, 33, 71, 1) 100%
+  );
 }
 
 #startscreen {
-  visibility: hidden;
+  /* visibility: hidden; */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: center;
+  z-index: 1;
 }
 
 h1 {
@@ -44,7 +50,7 @@ h1 {
 }
 
 #durationscreen {
-  visibility: hidden;
+  /* visibility: hidden; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,12 +75,13 @@ h2 {
   margin-bottom: 13px;
 }
 
-.time-selector {
-  color: #ccc;
+.time-selectors {
+  display: flex;
+  gap: 30;
 }
 
-.time-selector.time-selector-active {
-  color: #000;
+.time-selector {
+  color: #0000004b;
 }
 
 .time-selector p {
@@ -93,20 +100,42 @@ h2 {
 .button {
   font-size: 32px;
   padding: 13px 35px;
-  border: 2px solid;
+  border: 2px solid #000;
   border-radius: 60;
+  margin-top: 40px;
+  max-width: 75%;
 }
 
 .button:hover {
   cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+input {
+  visibility: hidden;
+}
+
+input:checked + div {
+  color: #000;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
 }
 
 #countdownscreen {
-  visibility: hidden;
+  /* visibility: hidden; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: -1;
 }
 
 .countdown-number {
@@ -116,11 +145,13 @@ h2 {
 }
 
 #exercicescreen {
-  visibility: hidden;
+  /* visibility: hidden; */
+  background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: -2;
 }
 
 .exercice-container {
@@ -132,14 +163,14 @@ h2 {
 .circle {
   position: absolute;
   z-index: -1;
-  background-color: #fff;
-  border: 5px solid;
+  background-color: #ffffff38;
   width: 300px;
   height: 300px;
   border-radius: 1200;
 }
 
 .instruction {
+  color: #fff;
   position: absolute;
   opacity: 0;
 }
@@ -149,7 +180,7 @@ h2 {
 }
 
 #endscreen {
-  /* visibility: hidden; */
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
